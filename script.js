@@ -1,7 +1,7 @@
 // pengulangan
 var lagi = true;
-var win = "";
-var lose = "";
+var win = 0;
+var lose = 0;
 while (lagi) {
   // angka random comp
   var comp = Math.floor(Math.random() * 10) + 1;
@@ -37,8 +37,10 @@ while (lagi) {
   if (p == comp) {
     alert(hasil + "\nJawabannya ialah : " + comp);
   }
-  if (p == true) {
+  if (p !== null) {
     alert("Total Score\nWin : " + win + "\nLose : " + lose);
+  } else {
+    break;
   }
   lagi = confirm("Mau main lagi?");
 }
