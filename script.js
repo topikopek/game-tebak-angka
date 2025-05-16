@@ -1,9 +1,12 @@
 // pengulangan
 var lagi = true;
+var win = "";
+var lose = "";
 while (lagi) {
   // angka random comp
   var comp = Math.floor(Math.random() * 10) + 1;
   var hasil = "";
+
   for (var c = 3; c >= 1; c--) {
     var p = prompt(
       "Pilihlah angka dari 1 - 10\nKamu punya " + c + " Kesempatan"
@@ -14,6 +17,7 @@ while (lagi) {
     p = parseInt(p);
     if (p == comp) {
       hasil = "Pilihan kamu benar";
+      win++;
       break;
     } else if (p < comp) {
       hasil = "Pilihanmu Rendah";
@@ -26,11 +30,18 @@ while (lagi) {
       alert(hasil + ", coba lagi\nkesempatanmu masih ada " + (c - 1));
     } else {
       alert("Kesempatan kamu sudah habis\nJawabannya ialah : " + comp);
+      lose++;
     }
   }
+
   if (p == comp) {
     alert(hasil + "\nJawabannya ialah : " + comp);
   }
+  if (p == true) {
+    alert("Total Score\nWin : " + win + "\nLose : " + lose);
+  }
   lagi = confirm("Mau main lagi?");
 }
-alert("Terima Kasih Sudah Bermain");
+alert(
+  "Terima Kasih Sudah Bermain\nTotal Score\nWin : " + win + "\nLose : " + lose
+);

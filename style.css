@@ -1,0 +1,22 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  color: orange;
+  text-align: center;
+}
+h1 a {
+  color: orange;
+}
+.opek {
+  padding-top: 100px;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  place-items: center;
+}
+img {
+  width: 300px;
+}
