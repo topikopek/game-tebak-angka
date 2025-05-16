@@ -27,7 +27,9 @@ while (lagi) {
       hasil = "inputan tidak valid";
     }
     if (c > 1) {
-      alert(hasil + ", coba lagi\nkesempatanmu masih ada " + (c - 1));
+      alert(
+        "Salah, " + hasil + ", coba lagi\nkesempatanmu masih ada " + (c - 1)
+      );
     } else {
       alert("Kesempatan kamu sudah habis\nJawabannya ialah : " + comp);
       lose++;
